@@ -3,14 +3,14 @@ Algorithmic English Spelling Reform
 
 Utilizes the CMU pronounincing dictionary to algorithmically convert IPA into reformed english spelling
 
-**Dependencies:
+**Dependencies:**
 
 eng_to_ipa
 
 https://github.com/mphilli/English-to-IPA
 
 
-**Example:
+**Example:**
 
 input = 'cultivation'
 
