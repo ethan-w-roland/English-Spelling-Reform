@@ -89,7 +89,8 @@ def poss(input, arr, word, out, i) :
         return
     if word[i] == 'ɛ': #eh
         poss(input, arr, word, out + 'e', i + 1)
-        poss(input, arr, word[:i]+"e"+word[i+1:], out, i) #/ei/
+        poss(input, arr, word, out + 'i', i + 1)
+        #poss(input, arr, word[:i]+"e"+word[i+1:], out, i) #/ei/
         return
     if word[i] == 'ɔ': #/o/
         if i == len(word)-1 or word[i+1] == 'l':
@@ -195,6 +196,12 @@ def poss(input, arr, word, out, i) :
         poss(input, arr, word, out + 'l', i + 1)
         if i == len(word) - 1:
             poss(input, arr, word, out + 'll', i + 1)
+        return
+    if word[i] == 'r': #r
+        if i == 0 and word[i+1] == 'i' and input[:3] != 'rea' and input[:3] != 'ree':
+            poss(input, arr, word, out + 're', i + 2)
+            return
+        poss(input, arr, word, out + 'r', i + 1)
         return
     poss(input, arr, word, out + word[i], i + 1)
     return
