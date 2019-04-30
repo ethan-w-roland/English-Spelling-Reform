@@ -12,8 +12,6 @@ https://github.com/mphilli/English-to-IPA
 
 **Example:**
 
-input = 'cultivation'
-
-new = alt.new(input)
-
-print(new) #new = 'cultiveishon'
+    input = 'cultivation'
+    new = alt.new(input)
+    print(new) #new = 'cultiveishon'
